@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Never Say Die with Sean Astin and Liv Tyler - Script</title>
+    <!-- You can include your CSS file here if you have one -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Your Generated Script</h1>
+        <div id="script">
+            {{ script|safe }}
+        </div>
+        <a href="/">Generate another script</a>
+    </div>
+</body>
+</html>
+
+<audio controls>
+    <source src="{{ audio }}" type="audio/wav">
+    Your browser does not support the audio element.
+</audio>

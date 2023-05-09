@@ -1,0 +1,24 @@
+[build-system]
+requires = ["flask", "python-dotenv", "openai", "requests", "gTTS"]
+build-backend = "setuptools.build_meta"
+
+[tool.poetry]
+name = "astin-concept-podcast"
+version = "0.1.0"
+description = "A dynamic podcast script generator powered by OpenAI."
+authors = ["Your Name <your.email@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+flask = "^1.1.2"
+openai = "^0.27.0"
+python-dotenv = "^0.19.1"
+requests = "^2.26.0"
+gTTS = "^2.3.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

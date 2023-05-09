@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    inline-size: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+#script-form {
+    margin: 2em 0;
+}
+
+#script {
+    white-space: pre-wrap;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #fff;
+    padding: 1em;
+    margin: 2em 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
