@@ -1,6 +1,9 @@
 from flask import Flask, render_template, request, jsonify
 from dotenv import load_dotenv
+import openai
 import os
+
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 from openai_script_generator import generate_script
 
