@@ -2,23 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Never Say Die with Sean Astin and Liv Tyler - Script</title>
-    <!-- You can include your CSS file here if you have one -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-</head>
-<body>
-    <div class="container">
-        <h1>Your Generated Script</h1>
-        <div id="script">
-            {{ script|safe }}
-        </div>
-        <a href="/">Generate another script</a>
-    </div>
-</body>
-</html>
+    <title>Generated Script | Never Say Die with Sean Astin and Liv Tyler</title>
 
-<audio controls>
-    <source src="{{ audio }}" type="audio/wav">
-    Your browser does not support the audio element.
-</audio>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+
+<body>
+
+  <!-- Wrap everything in a container div for centering purposes -->
+  <div class='container'>
+
+      <!-- Add a header with a link back to home page -->
+      <header class='header'>
+          <a href='/'>Back to Home Page</a> 
+      </header>
+
+      <!-- Add a section for displaying the generated script -->
+      <section id='generated-script'>
+          {{ script }}
+      </section>
+
+  </div>
+
+  <!-- Link to your JavaScript file at the bottom of the body -->
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+  <!-- Add audio player after script content -->
+  {% if audio %}
+  <audio controls style='margin-block-start: 2em;'>
+      <source src="{{ audio }}" type='audio/wav'>
+      Your browser does not support the audio element.
+  </audio>  
+  {% endif %}
+
+</body>
+
+</html>

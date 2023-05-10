@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Never Say Die with Sean Astin and Liv Tyler</title>
-    <!-- You can include your CSS file here if you have one -->
+    <!-- Link to your CSS file -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </head>
 <body>
     <div class="container">
@@ -19,8 +18,13 @@
                 <label for="topics">Topics:</label>
                 <input type="text" id="topics" name="topics" required>
             </div>
-            <button type="submit">Generate Script</button>
+            <!-- Add an ID to the submit button for styling purposes -->
+            <button type="submit" id="generate-script-btn">Generate Script</button>
         </form>
     </div>
+
+    <!-- Link to your JavaScript file at the bottom of the body -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
 </body>
 </html>
